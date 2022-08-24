@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
 :root {
   --dark-desat-blue: hsl(238, 29%, 16%);
   --soft-red: hsl(14, 88%, 65%);
@@ -24,24 +26,31 @@ body {
     var(--soft-violet) 20%,
     var(--soft-blue) 80%
   );
+  font-family: "Kumbh Sans", sans-serif;
 }
 
 main {
+  width: 93%;
   max-width: 922px;
   background-color: white;
-  display: flex;
-  flex-direction: column;
-  position: relative;
+  margin: 2em;
 }
 
 .box-float {
   position: absolute;
   top: 40%;
   left: -50px;
+  display: none;
 }
 
 @media screen and (min-width: 600px) {
   main {
-    flex-direction: row;
   }
+
+  .box-float {
+    display: block;
+  }
+}
+
+.img-container {
 }
