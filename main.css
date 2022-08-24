@@ -1,0 +1,47 @@
+:root {
+  --dark-desat-blue: hsl(238, 29%, 16%);
+  --soft-red: hsl(14, 88%, 65%);
+  --divider: hsl(240, 5%, 91%);
+  --soft-violet: hsl(273, 75%, 66%);
+  --soft-blue: hsl(240, 73%, 65%);
+  --v-dark-gray-blue: hsl(237, 12%, 33%);
+  --dark-gray-blue: hsl(240, 6%, 50%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--soft-violet);
+  background: linear-gradient(
+    180deg,
+    var(--soft-violet) 20%,
+    var(--soft-blue) 80%
+  );
+}
+
+main {
+  max-width: 922px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.box-float {
+  position: absolute;
+  top: 40%;
+  left: -50px;
+}
+
+@media screen and (min-width: 600px) {
+  main {
+    flex-direction: row;
+  }
+}
