@@ -28,6 +28,7 @@ body {
     var(--soft-violet) 20%,
     var(--soft-blue) 80%
   );
+  color: var(--dark-desat-blue);
   font-family: "Kumbh Sans", sans-serif;
 }
 
@@ -38,6 +39,8 @@ main {
   margin: 2.4rem;
   display: flex;
   flex-direction: column;
+  border-radius: 2rem;
+  padding: 0 2.5rem 4.6rem 2.5rem;
 }
 
 .box-float {
@@ -53,13 +56,13 @@ picture {
   background-image: url(./images/bg-pattern-mobile.svg);
   background-repeat: no-repeat;
   background-position: top center;
-  background-size: 73%;
+  background-size: 79.67%;
   padding-bottom: 6.6rem;
 }
 
 img {
   margin-top: -33%;
-  width: 73%;
+  width: 79.67%;
 }
 
 @media screen and (min-width: 600px) {
@@ -77,4 +80,44 @@ img {
 }
 
 .img-container {
+}
+
+h1 {
+  font-size: 3.2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 3.8rem;
+}
+
+details {
+  border-bottom: 0.1rem solid var(--divider);
+  margin-bottom: 1.5rem; /*maybe 1.7 */
+  padding-bottom: 1.5rem;
+  color: var(--dark-gray-blue);
+}
+
+summary {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+}
+summary:after {
+  content: url(/images/icon-arrow-down.svg);
+  transform-origin: center;
+  transition: 200ms linear;
+}
+
+details[open] summary:after {
+  transform: rotate(180deg);
+}
+
+details[open] summary {
+  font-weight: 700;
+  color: var(--dark-desat-blue);
+  margin-bottom: 1.5rem;
+}
+
+details summary:hover {
+  color: var(--soft-red);
 }
