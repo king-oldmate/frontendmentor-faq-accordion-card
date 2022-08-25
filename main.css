@@ -8,6 +8,7 @@
   --soft-blue: hsl(240, 73%, 65%);
   --v-dark-gray-blue: hsl(237, 12%, 33%);
   --dark-gray-blue: hsl(240, 6%, 50%);
+  font-size: 62.5%;
 }
 
 * {
@@ -16,7 +17,7 @@
 
 body {
   min-height: 100vh;
-  font-size: 12px;
+  font-size: 1.2rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -32,24 +33,46 @@ body {
 
 main {
   width: 93%;
-  max-width: 922px;
+  max-width: 92.2rem;
   background-color: white;
-  margin: 2em;
+  margin: 2.4rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .box-float {
   position: absolute;
   top: 40%;
-  left: -50px;
+  left: -5rem;
   display: none;
+}
+
+picture {
+  display: flex;
+  justify-content: center;
+  background-image: url(./images/bg-pattern-mobile.svg);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 73%;
+  padding-bottom: 6.6rem;
+}
+
+img {
+  margin-top: -33%;
+  width: 73%;
 }
 
 @media screen and (min-width: 600px) {
   main {
+    flex-direction: row;
   }
 
   .box-float {
     display: block;
+  }
+
+  img {
+    margin-top: 0;
   }
 }
 
