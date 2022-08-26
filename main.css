@@ -30,6 +30,7 @@ body {
   );
   color: var(--dark-desat-blue);
   font-family: "Kumbh Sans", sans-serif;
+  overflow-y: scroll;
 }
 
 main {
@@ -41,13 +42,14 @@ main {
   flex-direction: column;
   border-radius: 2rem;
   padding: 0 2.5rem 4.6rem 2.5rem;
+  margin-top: 14.6rem;
 }
 
 .box-float {
-  position: absolute;
-  top: 40%;
-  left: -5rem;
   display: none;
+  position: absolute;
+  top: 45%;
+  margin-left: -9.3rem;
 }
 
 picture {
@@ -65,20 +67,6 @@ img {
   width: 79.67%;
 }
 
-@media screen and (min-width: 600px) {
-  main {
-    flex-direction: row;
-  }
-
-  .box-float {
-    display: block;
-  }
-
-  img {
-    margin-top: 0;
-  }
-}
-
 .img-container {
 }
 
@@ -91,9 +79,15 @@ h1 {
 
 details {
   border-bottom: 0.1rem solid var(--divider);
-  margin-bottom: 1.5rem; /*maybe 1.7 */
+  margin-bottom: 1.7rem; /*maybe 1.7 */
   padding-bottom: 1.5rem;
   color: var(--dark-gray-blue);
+  font-size: 1.2rem;
+}
+
+details p {
+  line-height: 1.5rem;
+  padding-right: 3rem;
 }
 
 summary {
@@ -101,6 +95,8 @@ summary {
   cursor: pointer;
   display: flex;
   justify-content: space-between;
+  font-size: 1.4rem;
+  color: var(--v-dark-gray-blue);
 }
 summary:after {
   content: url(/images/icon-arrow-down.svg);
@@ -119,5 +115,67 @@ details[open] summary {
 }
 
 details summary:hover {
+  color: var(--soft-red);
+}
+
+@media screen and (min-width: 756px) {
+  main {
+    flex-direction: row;
+    padding: 0;
+    overflow-x: hidden;
+    margin-top: 9rem;
+  }
+
+  .box-float {
+    display: unset;
+  }
+  picture {
+    height: 100%;
+    align-items: center;
+    background-image: url(./images/bg-pattern-desktop.svg);
+    background-position: right -18rem;
+    padding: auto;
+    background-size: 170%;
+    margin-left: -8rem;
+    margin-right: 9.766%;
+    padding-top: 7rem;
+    padding-bottom: 8rem;
+  }
+  img {
+    margin-top: auto;
+    width: auto;
+    height: max-content;
+  }
+  .accordion-container {
+    width: 100%;
+    margin-top: 7rem;
+    margin-right: 10.304%;
+  }
+
+  h1 {
+    text-align: left;
+  }
+
+  summary {
+  }
+
+  details {
+  }
+}
+
+.attribution {
+  justify-self: flex-end;
+  margin-top: 5rem;
+  font-size: 1rem;
+  text-align: center;
+  color: white;
+}
+
+.attribution a {
+  color: white;
+  font-weight: 700;
+  text-decoration: none;
+}
+.attribution a:hover {
   color: var(--soft-red);
 }
