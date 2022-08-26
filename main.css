@@ -67,9 +67,6 @@ img {
   width: 79.67%;
 }
 
-.img-container {
-}
-
 h1 {
   font-size: 3.2rem;
   font-weight: 700;
@@ -154,12 +151,6 @@ details summary:hover {
 
   h1 {
     text-align: left;
-  }
-
-  summary {
-  }
-
-  details {
   }
 }
 
